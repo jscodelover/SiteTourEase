@@ -1,0 +1,17 @@
+{
+	"compilerOptions": {
+		"lib": ["dom", "dom.iterable", "esnext"],
+		"target": "ES2015",
+		"module": "esnext",
+		"strict": true,
+		"noEmit": true,
+		"skipLibCheck": true,
+		"noUncheckedIndexedAccess": true,
+		"forceConsistentCasingInFileNames": true,
+		"moduleResolution": "node",
+		"esModuleInterop": true,
+		"declaration": true // By providing the declaration files, users can import your library and get type hints in their IDEs, even if they are not using
+	},
+	"include": ["./src", "./tsup.config.ts"],
+	"exclude": []
+}

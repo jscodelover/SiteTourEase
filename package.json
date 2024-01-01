@@ -1,0 +1,57 @@
+{
+	"name": "sitetourease",
+	"license": "MIT",
+	"version": "0.0.0",
+	"description": "Enhance user onboarding with intuitive Interactive Tour Guide Library",
+	"keywords": [
+		"tour",
+		"guide"
+	],
+	"author": "Manisha Basra (jscodelover)",
+	"main": "./dist/index.js",
+	"module": "./dist/index.mjs",
+	"types": "./dist/index.d.ts",
+	"exports": {
+		".": {
+			"require": "./dist/index.js",
+			"import": "./dist/index.mjs",
+			"types": "./dist/index.d.ts"
+		}
+	},
+	"publishConfig": {
+		"access": "public"
+	},
+	"scripts": {
+		"start": "npm run lint && npm run dev-tsc",
+		"build": "tsup",
+		"dev-tsc": "tsup --watch",
+		"release": "npm run build && npm publish",
+		"lint": "eslint ./src",
+		"format": "prettier ./src -c -w --ignore-path .gitignore",
+		"____": "APP____"
+	},
+	"devDependencies": {
+		"@types/node": "^20.10.0",
+		"@typescript-eslint/eslint-plugin": "^6.10.0",
+		"@typescript-eslint/parser": "^6.10.0",
+		"eslint": "^8.53.0",
+		"eslint-config-prettier": "^9.0.0",
+		"eslint-plugin-prettier": "^5.0.1",
+		"husky": "^8.0.3",
+		"lint-staged": "^15.0.2",
+		"prettier": "^3.0.3",
+		"tsup": "^8.0.1",
+		"typescript": "^5.3.3"
+	},
+	"lint-staged": {
+		"*.{js,ts}": [
+			"npm run format",
+			"npm run lint"
+		]
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/jscodelover/sitetourease.git"
+	},
+	"homepage": "https://github.com/jscodelover/sitetourease#readme"
+}
